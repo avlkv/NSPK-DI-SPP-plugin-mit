@@ -40,7 +40,7 @@ class MIT:
     SOURCE_NAME = 'mit'
     _content_document: list[SPP_document]
 
-    def __init__(self, webdriver: WebDriver, last_document: SPP_document, max_count_documents: int = 100, *args, **kwargs):
+    def __init__(self, webdriver: WebDriver, last_document: SPP_document = None, max_count_documents: int = 100, *args, **kwargs):
         """
         Конструктор класса парсера
 
@@ -53,6 +53,7 @@ class MIT:
         self.driver = webdriver
         self.wait = WebDriverWait(self.driver, timeout=20)
         self.max_count_documents = max_count_documents
+        self.last_document = last_document
 
         # Логер должен подключаться так. Вся настройка лежит на платформе
         self.logger = logging.getLogger(self.__class__.__name__)
@@ -67,8 +68,12 @@ class MIT:
         :rtype:
         """
         self.logger.debug("Parse process start")
-        self._parse()
-        self.logger.debug("Parse process finished")
+        try:
+            self._parse()
+        except Exception as e:
+            self.logger.debug(f'Parsing stopped with error: {e}')
+        else:
+            self.logger.debug("Parse process finished")
         return self._content_document
 
     def _parse(self):
@@ -236,14 +241,8 @@ class MIT:
                                        other_data,
                                        pub_date,
                                        datetime.now())
-                    self._content_document.append(doc)
 
-                    self.logger.info(self._find_document_text_for_logger(doc))
-
-                    counter += 1
-
-                    if counter > self.max_count_documents:
-                        return
+                    self.find_document(doc)
 
                     # print('added to df')
                     # print('-' * 45)
@@ -285,4 +284,17 @@ class MIT:
         :rtype:
         """
         return f"Find document | name: {doc.title} | link to web: {doc.web_link} | publication date: {doc.pub_date}"
+
+    def find_document(self, _doc: SPP_document):
+        """
+        Метод для обработки найденного документа источника
+        """
+        if self.last_document and self.last_document.hash == _doc.hash:
+            raise Exception(f"Find already existing document ({self.last_document})")
+
+        if self.max_count_documents and len(self._content_document) >= self.max_count_documents:
+            raise Exception(f"Max count articles reached ({self.max_count_documents})")
+
+        self._content_document.append(_doc)
+        self.logger.info(self._find_document_text_for_logger(_doc))
 
