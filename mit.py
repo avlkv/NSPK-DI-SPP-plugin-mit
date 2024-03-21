@@ -91,52 +91,52 @@ class MIT:
 
         topics = {'Social media': 'https://news.mit.edu/topic/social-media',
                   'Wearable sensors': 'https://news.mit.edu/topic/wearable-sensors',
-                  # 'Data': 'https://news.mit.edu/topic/data',
-                  # 'School of Engineering': 'https://news.mit.edu/topic/school-engineering',
-                  # 'Wearables': 'https://news.mit.edu/topic/wearables',
-                  # 'Web': 'https://news.mit.edu/topic/web',
-                  # 'Web development': 'https://news.mit.edu/topic/web-development',
-                  # 'Social networks': 'https://news.mit.edu/topic/social-networks',
-                  # 'Sustainability': 'https://news.mit.edu/topic/sustainability',
-                  # 'System Design and Management': 'https://news.mit.edu/topic/system-design-and-management',
-                  # 'Systems design': 'https://news.mit.edu/topic/systems-design',
-                  # 'Systems engineering': 'https://news.mit.edu/topic/systems-engineering',
-                  # 'Taxes': 'https://news.mit.edu/topic/taxes',
-                  # 'Technology': 'https://news.mit.edu/topic/technology',
-                  # 'Technology and policy': 'https://news.mit.edu/topic/technology-and-policy',
-                  # 'Technology and society': 'https://news.mit.edu/topic/technology-society',
-                  # 'Information systems and technology': 'https://news.mit.edu/topic/information-systems-and-technology',
-                  # 'Information theory': 'https://news.mit.edu/topic/information-theory',
-                  # 'Innovation and Entrepreneurship (I&E)': 'https://news.mit.edu/topic/innovation',
-                  # 'Internet': 'https://news.mit.edu/topic/internet',
-                  # 'Internet of things': 'https://news.mit.edu/topic/internet-things',
-                  # 'Internet privacy': 'https://news.mit.edu/topic/internet-privacy',
-                  # 'Machine learning': 'https://news.mit.edu/topic/machine-learning',
-                  # 'Marketing': 'https://news.mit.edu/topic/marketing',
-                  # 'Natural language processing': 'https://news.mit.edu/topic/natural-language-processing',
-                  # 'Programming': 'https://news.mit.edu/topic/programming',
-                  # 'Programming languages': 'https://news.mit.edu/topic/programming-languages',
-                  # 'Quantum mechanics': 'https://news.mit.edu/topic/quantum-mechanics',
-                  # 'Quantum computing': 'https://news.mit.edu/topic/quantum-computing',
-                  # 'Quantum dots': 'https://news.mit.edu/topic/quantumdots',
-                  # 'smartphones': 'https://news.mit.edu/topic/smartphones',
-                  # 'Global economic crisis': 'https://news.mit.edu/topic/global-economic-crisis',
-                  # 'Global economy': 'https://news.mit.edu/topic/global-economy',
-                  # 'Google': 'https://news.mit.edu/topic/google',
-                  # 'Facebook': 'https://news.mit.edu/topic/facebook',
-                  # 'Finance': 'https://news.mit.edu/topic/finance',
-                  # 'finances': 'https://news.mit.edu/topic/finances',
-                  # 'Financial aid': 'https://news.mit.edu/topic/financial-aid',
-                  # 'Electrical engineering and electronics': 'https://news.mit.edu/topic/electrical-engineering',
-                  # 'Electrical engineering and computer science (EECS)': 'https://news.mit.edu/topic/electrical-engineering-and-computer-science-eecs',
-                  # 'Electrical Engineering & Computer Science (eecs)': 'https://news.mit.edu/topic/electrical-engineering-computer-science-eecs',
-                  # 'Cryptography': 'https://news.mit.edu/topic/cryptography',
-                  # 'Cybersecurity': 'https://news.mit.edu/topic/cyber-security',
-                  # 'Computer science and technology': 'https://news.mit.edu/topic/computers',
-                  # 'Computer vision': 'https://news.mit.edu/topic/computer-vision',
-                  # 'Analytics': 'https://news.mit.edu/topic/analytics',
-                  # 'Artificial intelligence': 'https://news.mit.edu/topic/artificial-intelligence2',
-                  # 'Big data': 'https://news.mit.edu/topic/big-data',
+                  'Data': 'https://news.mit.edu/topic/data',
+                  'School of Engineering': 'https://news.mit.edu/topic/school-engineering',
+                  'Wearables': 'https://news.mit.edu/topic/wearables',
+                  'Web': 'https://news.mit.edu/topic/web',
+                  'Web development': 'https://news.mit.edu/topic/web-development',
+                  'Social networks': 'https://news.mit.edu/topic/social-networks',
+                  'Sustainability': 'https://news.mit.edu/topic/sustainability',
+                  'System Design and Management': 'https://news.mit.edu/topic/system-design-and-management',
+                  'Systems design': 'https://news.mit.edu/topic/systems-design',
+                  'Systems engineering': 'https://news.mit.edu/topic/systems-engineering',
+                  'Taxes': 'https://news.mit.edu/topic/taxes',
+                  'Technology': 'https://news.mit.edu/topic/technology',
+                  'Technology and policy': 'https://news.mit.edu/topic/technology-and-policy',
+                  'Technology and society': 'https://news.mit.edu/topic/technology-society',
+                  'Information systems and technology': 'https://news.mit.edu/topic/information-systems-and-technology',
+                  'Information theory': 'https://news.mit.edu/topic/information-theory',
+                  'Innovation and Entrepreneurship (I&E)': 'https://news.mit.edu/topic/innovation',
+                  'Internet': 'https://news.mit.edu/topic/internet',
+                  'Internet of things': 'https://news.mit.edu/topic/internet-things',
+                  'Internet privacy': 'https://news.mit.edu/topic/internet-privacy',
+                  'Machine learning': 'https://news.mit.edu/topic/machine-learning',
+                  'Marketing': 'https://news.mit.edu/topic/marketing',
+                  'Natural language processing': 'https://news.mit.edu/topic/natural-language-processing',
+                  'Programming': 'https://news.mit.edu/topic/programming',
+                  'Programming languages': 'https://news.mit.edu/topic/programming-languages',
+                  'Quantum mechanics': 'https://news.mit.edu/topic/quantum-mechanics',
+                  'Quantum computing': 'https://news.mit.edu/topic/quantum-computing',
+                  'Quantum dots': 'https://news.mit.edu/topic/quantumdots',
+                  'smartphones': 'https://news.mit.edu/topic/smartphones',
+                  'Global economic crisis': 'https://news.mit.edu/topic/global-economic-crisis',
+                  'Global economy': 'https://news.mit.edu/topic/global-economy',
+                  'Google': 'https://news.mit.edu/topic/google',
+                  'Facebook': 'https://news.mit.edu/topic/facebook',
+                  'Finance': 'https://news.mit.edu/topic/finance',
+                  'finances': 'https://news.mit.edu/topic/finances',
+                  'Financial aid': 'https://news.mit.edu/topic/financial-aid',
+                  'Electrical engineering and electronics': 'https://news.mit.edu/topic/electrical-engineering',
+                  'Electrical engineering and computer science (EECS)': 'https://news.mit.edu/topic/electrical-engineering-and-computer-science-eecs',
+                  'Electrical Engineering & Computer Science (eecs)': 'https://news.mit.edu/topic/electrical-engineering-computer-science-eecs',
+                  'Cryptography': 'https://news.mit.edu/topic/cryptography',
+                  'Cybersecurity': 'https://news.mit.edu/topic/cyber-security',
+                  'Computer science and technology': 'https://news.mit.edu/topic/computers',
+                  'Computer vision': 'https://news.mit.edu/topic/computer-vision',
+                  'Analytics': 'https://news.mit.edu/topic/analytics',
+                  'Artificial intelligence': 'https://news.mit.edu/topic/artificial-intelligence2',
+                  'Big data': 'https://news.mit.edu/topic/big-data',
                   'Blockchain': 'https://news.mit.edu/topic/blockchain'}
 
         # chrome_options = webdriver.ChromeOptions()
@@ -144,17 +144,6 @@ class MIT:
 
         # chrome_options.add_argument('--headless')
         """Опция Chrome - Запуск браузера без пользовательского интерфейса (в фоне)"""
-
-        # chrome_options.add_experimental_option('prefs', {'download.default_directory': downloads_dir, # Переопределение пути сохранения файлов для текущего запуска драйвера браузера Chrome
-        #                                                 'profile.default_content_setting_values.automatic_downloads': 1}) # Разрешить автоматическую загрузку файла без доп. согласия
-
-        counter = 0
-
-        # chrome_options.page_load_strategy = 'none'
-
-        # s = Service(executable_path=driver_path)
-        # driver = webdriver.Chrome(service=s, options=chrome_options)
-        # wait = WebDriverWait(driver, timeout=20)
 
         for i, topic in enumerate(topics):
             try:
@@ -176,12 +165,7 @@ class MIT:
                                                        'term-page--news-article--item--title--link').get_attribute(
                         'href')
 
-                    # if web_link in df['web_link'].to_list():
-                    #     # print(f'web_link already in df, skipping: {web_link}')
-                    #     # print('-'*45)
-                    #     continue
-                    # else:
-                    # print(f'new web_link: {web_link}')
+
                     try:
                         abstract = el_list[i].find_element(By.CLASS_NAME, 'term-page--news-article--item--dek').text
                     except:
@@ -190,11 +174,7 @@ class MIT:
 
                     pub_date = dateparser.parse(el_list[i].find_element(By.TAG_NAME, 'time').get_attribute('datetime'))
 
-                    # if pub_date < date_begin:
-                    #     # print(f"Достигнута дата раньше {date_begin}. Далее...")
-                    #     break
-                    # else:
-                    #     print(f'new up-to-date web_link: {web_link}')
+
                     self.driver.execute_script("window.open('');")
                     self.driver.switch_to.window(self.driver.window_handles[1])
                     try:
@@ -203,8 +183,7 @@ class MIT:
                             EC.presence_of_element_located((By.CSS_SELECTOR, '.news-article--content--body--inner')))
                         # time.sleep(uniform(0.5, 1.5))
                     except Exception as e:
-                        # print('!!! Не удалось загрузить страницу. Пропуск...')
-                        # print('-' * 45)
+
                         self.driver.close()
                         self.driver.switch_to.window(self.driver.window_handles[0])
                         continue
@@ -222,15 +201,7 @@ class MIT:
                     other_data['tags'] = related_topics
                     other_data['author'] = author
 
-                    # print(web_link)
-                    # print(title)
-                    # print(pub_date)
-                    # print(related_topics)
-                    # print(text_content)
-                    # row_data_list = [title, abstract, text_content, web_link, None,
-                    #                  other_data, pub_date, datetime.now()]
 
-                    # df.loc[df.shape[0]] = row_data_list
 
                     doc = SPP_document(None,
                                        title,
@@ -244,31 +215,19 @@ class MIT:
 
                     self.find_document(doc)
 
-                    # print('added to df')
-                    # print('-' * 45)
                     self.driver.close()
                     self.driver.switch_to.window(self.driver.window_handles[0])
 
                 try:
                     next_page = self.driver.find_element(By.XPATH, '//*[contains(@class, \'pager--button--next\')]')
-                    # print('Found next page')
+
                     self.driver.execute_script('arguments[0].click()', next_page)
                     time.sleep(uniform(0.5, 1.5))
-                    # print('Next page load')
+
                     more_pages = True
                 except Exception as e:
-                    # print('No more pages in topic, next topic...')
-                    # print(e)
+
                     more_pages = False
-            # df.to_csv(df_path, sep='\t', index=False)
-            # print(f' ============ Сохранен df: {df_path}')
-
-        # print('=' * 90)
-        # print(f'new docs: {counter}')
-
-        # df.to_csv(df_path, sep='\t', index=False)
-
-
 
         # ---
         # ========================================
