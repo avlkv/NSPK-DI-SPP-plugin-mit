@@ -11,17 +11,12 @@ import logging                                         # Для логирова
 from selenium import webdriver                         # Для взаимодействия с драйвером браузера Chrome
 # from selenium.webdriver.chrome.options import Options  # Для обозначения особенностей работы драйвера браузера Chrome
 from selenium.webdriver.chrome.webdriver import WebDriver
-from selenium.webdriver.common.by import By            # Для описания элементов
-from selenium.webdriver.chrome.service import Service
-# https://stackoverflow.com/questions/44503576/selenium-python-how-to-stop-page-loading-when-certain-element-gets-loaded
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import dateparser
 from random import uniform
-import pytz
-
 from src.spp.types import SPP_document
 
 
@@ -150,29 +145,30 @@ class MIT:
                 self.driver.get(topics[topic])
                 self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '.page-term--views--list')))
             except:
-                print(f'=== Не удалось загрузить ({i + 1}/{len(topics)}) {topic} ===\nПропуск...')
+                # print(f'=== Не удалось загрузить ({i + 1}/{len(topics)}) {topic} ===\nПропуск...')
                 continue
-            print(f'=== ({i + 1}/{len(topics)}) {topic} ===')
+            # print(f'=== ({i + 1}/{len(topics)}) {topic} ===')
             more_pages = True
             while more_pages:
                 try:
                     el_list = self.driver.find_elements(By.TAG_NAME, 'article')
                 except Exception as e:
-                    print('Error finding articles')
-                for i, el in enumerate(el_list):
-                    title = el_list[i].find_element(By.CLASS_NAME, 'term-page--news-article--item--title--link').text
-                    web_link = el_list[i].find_element(By.CLASS_NAME,
+                    el_list = []
+                    # print('Error finding articles')
+                for j, el in enumerate(el_list):
+                    title = el_list[j].find_element(By.CLASS_NAME, 'term-page--news-article--item--title--link').text
+                    web_link = el_list[j].find_element(By.CLASS_NAME,
                                                        'term-page--news-article--item--title--link').get_attribute(
                         'href')
 
 
                     try:
-                        abstract = el_list[i].find_element(By.CLASS_NAME, 'term-page--news-article--item--dek').text
+                        abstract = el_list[j].find_element(By.CLASS_NAME, 'term-page--news-article--item--dek').text
                     except:
-                        print('No abstract')
+                        # print('No abstract')
                         abstract = ''
 
-                    pub_date = dateparser.parse(el_list[i].find_element(By.TAG_NAME, 'time').get_attribute('datetime'))
+                    pub_date = dateparser.parse(el_list[j].find_element(By.TAG_NAME, 'time').get_attribute('datetime'))
 
 
                     self.driver.execute_script("window.open('');")
@@ -200,8 +196,6 @@ class MIT:
                     other_data = {}
                     other_data['tags'] = related_topics
                     other_data['author'] = author
-
-
 
                     doc = SPP_document(None,
                                        title,
